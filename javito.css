@@ -1,0 +1,27 @@
+#container {
+        display: flex;
+        background-color:#12406A ;
+        height: 60%;
+        width: 60%;
+        
+}
+
+.doboz{
+    height: 40%;
+    width: 40%;
+
+
+}
+
+#egy{
+    color: beige;
+    background-color: #EB8F90;
+}
+
+#ketto{
+    color: blue;
+}
+
+#harom{
+    color: #030d16 ;
+}
