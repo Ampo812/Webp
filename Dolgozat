@@ -1,0 +1,57 @@
+1.feladat
+function sumOfArraySingles(arr) {
+    let singles = new Set();
+    let duplicates = new Set();
+    
+    for (let num of arr) {
+        if (duplicates.has(num)) {
+            singles.delete(num);
+        } else {
+            duplicates.add(num);
+            singles.add(num);
+        }
+    }
+    
+    let sum = 0;
+    singles.forEach(num => sum += num);
+    return sum;
+}
+
+console.log(repeats([4, 5, 7, 5, 4, 8])); 
+console.log(sumOfArraySingles([9, 10, 19, 13, 19, 13]), 19)
+console.log(sumOfArraySingles([16, 0, 11, 4, 8, 16, 0, 11]), 12)
+console.log(sumOfArraySingles([5, 17, 18, 11, 13, 18, 11, 13]), 22)
+console.log(sumOfArraySingles([5, 10, 19, 13, 10, 13]), 24)
+
+2.feladat
+function  sortArraysIgnoringCase (arr) {
+    return arr.sort((a, b) => a.localeCompare(b));
+}
+
+console.log( sortArraysIgnoringCase (["Hello", "there", "I'm", "fine"])); /
+console.log( sortArraysIgnoringCase (["C", "d", "a", "B"])); 
+console.log(sortArraysIgnoringCase(["C", "d", "a", "B"]), ["a", "B", "C", "d"])
+console.log(sortArraysIgnoringCase(["CodeWars"]), ["CodeWars"])
+console.log(sortArraysIgnoringCase([]), [])
+
+3.feladat
+function insertDashes(num) {
+    const numStr = num.toString();
+    let result = '';
+
+    for (let i = 0; i < numStr.length; i++) {
+        result += numStr[i];
+        if (parseInt(numStr[i]) % 2 !== 0 && parseInt(numStr[i + 1]) % 2 !== 0 && i !== numStr.length - 1) {
+            result += '-';
+        }
+    }
+
+    return result;
+}
+
+
+console.log(insertDashes(454793)); 
+console.log(insertDash(123456), '123456')
+console.log(insertDash(1003567), '1003-567')
+console.log(insertDash(13570), '1-3-5-70')
+console.log(insertDash(0), '0')
