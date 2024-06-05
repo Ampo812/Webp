@@ -1,0 +1,26 @@
+function findDifference(A, B) {
+    const countMap = new Map();
+
+    for (const char of A) {
+        countMap.set(char, (countMap.get(char) || 0) + 1);
+    }
+
+    for (const char of B) {
+        countMap.set(char, (countMap.get(char) || 0) - 1);
+    }
+
+    const difference = [];
+    for (const [char, count] of countMap) {
+        if (count !== 0) {
+            difference.push(char);
+        }
+    }
+
+    // Sort the result and return
+    return difference.sort();
+}
+
+const A = ['a', 'a', 't', 'e', 'f', 'i', 'j'];
+const B = ['t', 'g', 'g', 'i', 'k', 'f'];
+
+console.log(findDifference(A, B)); // Output: ['a', 'e', 'g', 'j', 'k']
