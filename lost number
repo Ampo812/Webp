@@ -1,0 +1,10 @@
+function findDeletedNumber(original, mixed) {
+    const originalSum = original.reduce((a, b) => a + b, 0);
+    const mixedSum = mixed.reduce((a, b) => a + b, 0);
+    return originalSum - mixedSum;
+}
+
+console.log(findDeletedNumber([1, 2, 3, 4, 5, 6, 7, 8, 9], [3, 2, 4, 6, 7, 8, 1, 9]));  
+console.log(findDeletedNumber([1, 2, 3], [1, 3]));  
+console.log(findDeletedNumber([1], [])); 
+console.log(findDeletedNumber([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]));  
