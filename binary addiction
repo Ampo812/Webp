@@ -1,0 +1,8 @@
+function addBinary(a, b) {
+    const sum = a + b;
+    return sum.toString(2);
+}
+
+console.log(addBinary(1, 1)); // Output: "10"
+console.log(addBinary(5, 9)); // Output: "1110"
+console.log(addBinary(3, 7)); // Output: "1010"
