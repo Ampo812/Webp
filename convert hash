@@ -1,0 +1,7 @@
+function hashToArray(hash) {
+    return Object.entries(hash);
+}
+
+// Test case
+const hash = { name: 'Jeremy', age: 24, role: 'Software Engineer' };
+console.log(hashToArray(hash));
