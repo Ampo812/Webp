@@ -1,0 +1,17 @@
+function placeInMiddle(X, Y, N) {
+    const rep = Y.repeat(N);
+    const mid = Math.floor(rep.length / 2);
+    return N % 2 === 0 ? X : rep.slice(0, mid) + X + rep.slice(mid);
+}
+
+// Example usage:
+const X = 'A';
+const Y = '*';
+const N = 10;
+console.log(placeInMiddle(X, Y, N)); 
+
+f=(X,Y,N)=>N%2?Y.repeat(N).replace(/.(?=.)/,X):X
+
+// Example usage:
+console.log(f('A', '*', 10));  
+console.log(f('A', '*', 9));   
