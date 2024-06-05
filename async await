@@ -1,0 +1,49 @@
+
+function fetchCourses() {
+    fetch('https://api.example.com/courses')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Hiba történt a kéréskor: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Hiba történt:', error);
+        });
+}
+
+
+async function fetchCoursesAsync() {
+    try {
+        const response = await fetch('https://api.example.com/courses');
+        if (!response.ok) {
+            throw new Error('Hiba történt a kéréskor: ' + response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Hiba történt:', error);
+    }
+}
+
+
+const fetchData = async () => {
+    try {
+        const response = await fetch('https://api.example.com/courses');
+        if (!response.ok) {
+            throw new Error('Hiba történt a kéréskor: ' + response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Hiba történt:', error);
+    }
+};
+
+
+fetchCourses(); 
+fetchCoursesAsync(); 
+fetchData();  
