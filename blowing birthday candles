@@ -1,0 +1,26 @@
+function countBlows(candles) {
+    let blows = 0;
+    let strength = candles.split('').map(Number);
+    
+    while (strength.some(candle => candle > 0)) {
+        let numCandles = 0;
+        let i = 0;
+        
+        while (i < strength.length && numCandles < 3) {
+            if (strength[i] > 0) {
+                strength[i]--;
+                numCandles++;
+            }
+            i++;
+        }
+        
+        blows++;
+    }
+    
+    return blows;
+}
+
+// Test cases
+console.log(countBlows("1321")); // Output: 3
+console.log(countBlows("0323456")); // Output: 9
+console.log(countBlows("2113")); // Output: 5
