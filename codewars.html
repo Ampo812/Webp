@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codewars Pontok</title>
+    <link rel="stylesheet" href="codewars.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="showSummary">Összesített adatok</a></li>
+                <li><a href="#" id="showLanguages">Nyelvek szerinti szétosztás</a></li>
+                <li><a href="#" id="showTopList">Toplista</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="userInput">
+            <input type="text" id="username" placeholder="Felhasználónév">
+            <button id="fetchData">Adatok betöltése</button>
+        </section>
+        <section id="results">
+            <!-- Itt jelennek meg az eredmények -->
+        </section>
+        <section id="error" style="display:none;">
+            <p id="errorMessage"></p>
+        </section>
+    </main>
+    <script src="codewars.js"></script>
+</body>
+</html>
